@@ -19,7 +19,7 @@ int main() {
     }
     cout << str2;
     ofstr << str2; 
-    infile.close();
-    infilee.close();
+    ifstr.close();
+    ofstr.close();
     return 0;
 }
