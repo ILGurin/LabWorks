@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>userlist</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+</head>
+<body>
+
+    <div th:insert="~{navbar :: navbar}"></div>
+
+    <div class="container text-center mt-5">
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Role</th>
+            <th></th>
+        </tr>
+    </thead>
+
+        <tbody>
+        <tr th:each="user : ${users}">
+            <td th:text="${user.username}"></td>
+            <td>
+                <span th:each="role, iterStat : ${user.roles}">
+                    <span th:text="${role}"></span>
+                    <span th:if="${!iterStat.last}">, </span>
+                </span>
+            </td>
+            <td><a th:href="@{/user/{id}(id=${user.id})}">edit</a></td>
+        </tr>
+        </tbody>
+
+</table>
+
+<a href="/registration">Добавить нового пользователя</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee editor</title>
+</head>
+<body>
+<div th:insert="~{navbar :: navbar}"></div>
+
+<div class="container mt-5">
+    <h1>Employee editor</h1>
+
+    <!--    Форма изменения данных-->
+    <form action="/main/save" method="post" class="mt-4">
+        <div class="input-group">
+            <span class="input-group-text">ФИО</span>
+            <input type="text" aria-label="First name"  name="name" class="form-control" th:value="${employee.surname}">
+            <input type="text" aria-label="Last name" name="surname" class="form-control" th:value="${employee.name}">
+            <input type="text" aria-label="" name="patronymic" class="form-control" th:value="${employee.patronymic}">
+        </div>
+        <div class="input-group">
+            <span class="input-group-text">Дата рождения</span>
+            <input type="text" aria-label="dataOfBirth" name="dataOfBirth" class="form-control" th:value="${employee.dataOfBirth}">
+        </div>
+        <div class="input-group">
+            <span class="input-group-text">Отдел</span>
+            <input type="text" aria-label="departmentName" name="departmentName" class="form-control" th:value="${employee.departmentName}">
+        </div>
+        <div class="input-group">
+            <span class="input-group-text">Должность</span>
+            <input type="text" aria-label="position" name="position" class="form-control" th:value="${employee.position}">
+        </div>
+        <div class="input-group">
+            <span class="input-group-text">Дата поступления на работу</span>
+            <input type="text" aria-label="startDate" name="startDate" class="form-control" th:value="${employee.startDate}">
+        </div>
+
+        <input type="hidden" th:value="${employee.id}" name="employeeId">
+        <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+        <button type="submit" class="btn btn-primary mt-2">Save</button>
+    </form>
+
+    <form th:action="'/main/'+'${employee.id}' + '/remove'" method="post">
+        <button type="submit" class="btn btn-danger">DELETE</button>
+        <input type="hidden" th:value="${employee.id}" name="employeeId">
+        <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+    </form>
+</div>
+</body>
+</html>
