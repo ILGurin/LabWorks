@@ -400,3 +400,5 @@ FodyWeavers.xsd
 *.vcxproj
 *.sln
 *.jar
+*.zip
+*.jar
