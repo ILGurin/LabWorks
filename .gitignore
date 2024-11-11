@@ -482,3 +482,10 @@ CMakeLists.txt.user*
 *.exe
 
 /semestr_5/OOP/lab_1/build
+*.stash
+*.json
+*.txt
+/semestr_5/SP/addingSeeds/.idea
+*.jar
+semestr_5/SP/lab_1/small.ico
+semestr_5/OOP/lab_1/lab_1_en_GB.ts
