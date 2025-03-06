@@ -24,8 +24,6 @@ import java.util.Objects;
 import by.rpomp.lab_1.MyApplication;
 import by.rpomp.lab_1.MyArrayAdapter;
 import by.rpomp.lab_1.R;
-import by.rpomp.lab_1.activities.ApodActivity;
-import by.rpomp.lab_1.activities.DetailActivity;
 import by.rpomp.lab_1.api.ApiClient;
 import by.rpomp.lab_1.api.ApiService;
 import by.rpomp.lab_1.api.Photo;
