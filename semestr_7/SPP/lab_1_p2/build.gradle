@@ -1,0 +1,20 @@
+plugins {
+    id 'java'
+}
+
+group = 'by.brstu'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    implementation("redis.clients:jedis:6.2.0")
+}
+
+test {
+    useJUnitPlatform()
+}

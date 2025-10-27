@@ -494,3 +494,5 @@ semestr_5/OOP/lab_1/lab_1_en_GB.ts
 
 
 **/.idea/
+/semestr_6/NPO/lab_2/gradle
+*.class
